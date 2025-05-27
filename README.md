@@ -6,7 +6,7 @@
   Hajee Mohammad Danesh Science and Technology University,Dinajpur-5200.
 </h3>
 <h3 align="center">
-<b></b>Assignment Name: FiboFlux Seeding Cipher –A Fibonacci-Based Symmetric Encryption Algorithm<b></b>
+<b></b>Assignment Name: FiboFlux Seeding Cipher <b></b>
 </h3>
 
 <h3 align="center">
