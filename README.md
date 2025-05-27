@@ -114,6 +114,8 @@ flowchart TD
 4. Return the original plaintext.
 
 ---
+### 🔐 Decrytption Flowchart
+
 ```mermaid
 flowchart TD
     A[Start] --> B[Input ciphertext]
