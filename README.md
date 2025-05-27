@@ -121,7 +121,7 @@ Random Seeds:
 
 ## 💻 Source Code
 ```cpp
-#include <bits/stdc++.h>  // For time
+#include <bits/stdc++.h>  // For any time
 
 using namespace std;
 
