@@ -77,6 +77,34 @@ Key components:
 
 ---
 
+### 🔐 Encryption Flowchart
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Input plaintext]
+    B --> C{Is plaintext empty?}
+    C -- Yes --> D[Display 'Plaintext is empty'] --> E[End]
+    C -- No --> F[Generate seeds]
+    F --> G[Generate Fibonacci sequence]
+    G --> H[For each character in plaintext]
+    H --> I{Character type?}
+    I -- Uppercase --> J[Shift A-Z]
+    I -- Lowercase --> K[Shift a-z]
+    I -- Digit --> L[Shift 0-9]
+    I -- Special Char --> M[Shift specials]
+    I -- Other --> N[Leave unchanged]
+    J --> O[Append to ciphertext]
+    K --> O
+    L --> O
+    M --> O
+    N --> O
+    O --> P{More characters?}
+    P -- Yes --> H
+    P -- No --> Q[Output ciphertext]
+    Q --> R[End]
+
+```
+
 ## 🔓 Decryption Process
 **Steps:**
 1. Use the same `key1` and `key2` as used during encryption.
@@ -86,6 +114,31 @@ Key components:
 4. Return the original plaintext.
 
 ---
+```mermaid
+flowchart TD
+    A[Start] --> B[Input ciphertext]
+    B --> C{Is ciphertext empty?}
+    C -- Yes --> D[Display 'Ciphertext is empty'] --> E[End]
+    C -- No --> F[Input seed1 and seed2]
+    F --> G[Generate Fibonacci sequence using seed1 and seed2]
+    G --> H[For each character in ciphertext]
+    H --> I{Character type?}
+    I -- Uppercase --> J[Reverse shift A-Z]
+    I -- Lowercase --> K[Reverse shift a-z]
+    I -- Digit --> L[Reverse shift 0-9]
+    I -- Special Char --> M[Reverse shift in pool]
+    I -- Other --> N[Leave unchanged]
+    J --> O[Append to plaintext]
+    K --> O
+    L --> O
+    M --> O
+    N --> O
+    O --> P{More characters?}
+    P -- Yes --> H
+    P -- No --> Q[Output plaintext]
+    Q --> R[End]
+```
+
 
 ## 🧪 Examples with Test Cases
 
