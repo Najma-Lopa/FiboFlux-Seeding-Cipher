@@ -33,7 +33,7 @@
 ----
 # FiboFlux Seeding Cipher –A Fibonacci-Based Symmetric Encryption Algorithm
 
-## 📄 Table of Contents
+##  Table of Contents
 - [Overview](#overview)
 - [Introduction](#introduction)
 - [Encryption Process](#encryption-process)
@@ -46,14 +46,14 @@
 - [References](#references)
 - [Source Code](#source-code)
 
-## 📘 Overview
+##  Overview
 **FiboFlux Seeding Cipher** is a symmetric encryption algorithm based on the Fibonacci sequence and modular arithmetic. It encrypts each character of the plaintext using a position-specific shift derived from a Fibonacci series seeded by two random values. It supports letters, digits, and a predefined pool of special characters.
 
 This algorithm is ideal for educational demonstrations and lightweight cryptographic use where moderate confusion and diffusion are desired.
 
 ---
 
-## ✨ Introduction
+##  Introduction
 In modern cryptography, simple and effective encryption techniques are still valued in scenarios with limited computational power or constrained devices. **FiboFlux Seeding Cipher** provides a fresh take on character-shifting ciphers by using the deterministic yet nonlinear growth of the Fibonacci sequence to govern the encryption process.
 
 Key components:
@@ -64,7 +64,7 @@ Key components:
 
 ---
 
-## 🔐 Encryption Process
+##  Encryption Process
 **Steps:**
 1. Randomly generate two integer keys `key1` and `key2` (1 ≤ key ≤ 255).
 2. Generate a Fibonacci sequence of length equal to the plaintext length using `key1` and `key2`, with each term taken modulo 26.
@@ -77,7 +77,7 @@ Key components:
 
 ---
 
-### 🔐 Encryption Flowchart
+###  Encryption Flowchart
 
 ```mermaid
 flowchart TD
@@ -105,7 +105,7 @@ flowchart TD
 
 ```
 
-## 🔓 Decryption Process
+##  Decryption Process
 **Steps:**
 1. Use the same `key1` and `key2` as used during encryption.
 2. Regenerate the Fibonacci sequence of the same length as the ciphertext.
@@ -114,7 +114,7 @@ flowchart TD
 4. Return the original plaintext.
 
 ---
-### 🔐 Decrytption Flowchart
+###  Decrytption Flowchart
 
 ```mermaid
 flowchart TD
@@ -142,9 +142,9 @@ flowchart TD
 ```
 
 
-## 🧪 Examples with Test Cases
+##  Examples with Test Cases
 
-### 🔹 Example 1: Encrypting & Decrypting "Lopa@#321"
+###  Example 1: Encrypting & Decrypting "Lopa@#321"
 Random Seeds:
 - `seed1 = 42`
 - `seed2 = 199`
@@ -164,7 +164,7 @@ Random Seeds:
 - **Ciphertext**: `"Bfwy[:792"`
 - **Decrypted**: `"Lopa@#321"`
 
-### 🔹 Example 2: Encrypting & Decrypting "HSTU&%2025"
+###  Example 2: Encrypting & Decrypting "HSTU&%2025"
 Random Seeds:
 - `seed1 = 87`
 - `seed2 = 120`
@@ -185,28 +185,28 @@ Random Seeds:
 - **Ciphertext**: `"QFPD*^5875"`
 - **Decrypted**: `"HSTU&%2025"`
 
-## ✅ Benefits of FiboFlux Seeding Cipher
-- 🔢 **Deterministic Shift**: Position-based variation makes pattern recognition harder.
-- 🔄 **Symmetric & Reversible**: Ensures lossless decryption with original keys.
-- 🔐 **Flexible Character Support**: Handles alphabets, numbers, and special characters.
-- 🧠 **Educational Tool**: Ideal for learning concepts like modular arithmetic and symmetric encryption.
-- 🪶 **Lightweight**: No need for external libraries or complex data structures.
+##  Benefits of FiboFlux Seeding Cipher
+-  **Deterministic Shift**: Position-based variation makes pattern recognition harder.
+-  **Symmetric & Reversible**: Ensures lossless decryption with original keys.
+-  **Flexible Character Support**: Handles alphabets, numbers, and special characters.
+-  **Educational Tool**: Ideal for learning concepts like modular arithmetic and symmetric encryption.
+-  **Lightweight**: No need for external libraries or complex data structures.
 
 ---
 
-## 🧾 Conclusion
+##  Conclusion
 **FiboFlux Seeding Cipher** is a novel encryption algorithm leveraging the Fibonacci sequence to determine dynamic character shifts. It showcases how deterministic sequences can introduce strong variation and confusion, especially when combined with careful handling of different character types. It is best suited for educational applications and low-resource environments.
 
 ---
 
-## 📚 References
+##  References
 - Stallings, William. *Cryptography and Network Security: Principles and Practice*  
 - Fibonacci Sequence – [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number)  
 - Caesar Cipher – [Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)  
 
 ---
 
-## 💻 Source Code
+##  Source Code
 ```cpp
 #include <bits/stdc++.h>  // For any time
 
