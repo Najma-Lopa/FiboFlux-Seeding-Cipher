@@ -42,6 +42,7 @@
   - [Example 1: "Lopa@#321"](#example-1-lopa321)
   - [Example 2: "HSTU&%2025"](#example-2-hstu2025)
 - [Benefits of FiboCrypt](#benefits-of-FiboFlux-Seeding-Cipher)
+- [Comparison Table](#conclusion)
 - [Conclusion](#conclusion)
 - [References](#references)
 - [Source Code](#source-code)
@@ -185,6 +186,23 @@ Random Seeds:
 - **Ciphertext**: `"QFPD*^5875"`
 - **Decrypted**: `"HSTU&%2025"`
 
+---
+# Table 1.1 – FiboFlux Seeding Cipher vs Other Algorithms: Key Differences
+
+| **Feature**             | **FiboFlux Seeding Cipher**                                                          | **Caesar Cipher**                    | **Vigenère Cipher**                      | **AES (Advanced Encryption Standard)**             |
+|-------------------------|----------------------------------------------------------------------------------------|--------------------------------------|------------------------------------------|----------------------------------------------------|
+| **Type**                | Custom, symmetric, Fibonacci-seeded                                                   | Classical, symmetric                 | Classical, polyalphabetic                | Modern, symmetric block cipher                     |
+| **Key Structure**       | Initial seed + Fibonacci series-driven transformation                                 | Single shift value (integer)         | Keyword (string)                         | 128/192/256-bit key                                |
+| **Substitution Logic**  | Dynamic substitution using Fibonacci-generated values                                 | Simple letter shift                  | Letter shift based on keyword            | Complex S-box substitution                         |
+| **Permutation**         | Optional (can reorder bytes using Fibonacci index mapping)                            | ❌                                   | ❌                                       | Implicit permutation in rounds                     |
+| **Modular Arithmetic**  | Uses Fibonacci values mod 256 (or 26 for letters)                                     | Addition mod 26                      | Addition mod 26                          | Finite field arithmetic (GF(2⁸))                   |
+| **Decryption Needs**    | Reverse Fibonacci stream + inverse mapping                                            | Reverse shift                        | Reverse keyword-based shift              | Reverse rounds using inverse S-box and keys        |
+| **Educational Purpose** | Demonstrates creative key scheduling and dynamic transformations                      | Historical only                      | Historical, basic cryptography           | Real-world industrial standard                     |
+| **Security Strength**   | Moderate (suitable for learning, not for production use)                              | Very weak                            | Weak (easily broken)                     | Strong (global standard, widely adopted)           |
+| **Block-Based?**        | Yes (can process fixed-size character or byte blocks)                                 | No                                   | No                                       | Yes (128-bit blocks)                               |
+| **Customizability**     | High (seed, block size, series depth can be varied)                                   | Low                                  | Medium                                   | Low (fixed key and operation configuration)        |
+
+---
 ##  Benefits of FiboFlux Seeding Cipher
 -  **Deterministic Shift**: Position-based variation makes pattern recognition harder.
 -  **Symmetric & Reversible**: Ensures lossless decryption with original keys.
